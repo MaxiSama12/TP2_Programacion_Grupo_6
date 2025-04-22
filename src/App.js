@@ -1,6 +1,7 @@
 import logo from './logo.svg';
-import './App.css';
+import './styles/App.css';
 
+//Samaniego Esteban Maximiliano, Legajo: 61468
 function App() {
   return (
     <div className="App">
