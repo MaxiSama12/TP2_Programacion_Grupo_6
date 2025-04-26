@@ -1,9 +1,11 @@
-import React from 'react'
+import React from 'react';
 
 const NosotrosPages = () => {
   return (
-    <div>NosotrosPages</div>
-  )
+    <div>
+      <h1>Nosotros Page</h1>
+    </div>
+  );
 }
 
-export default NosotrosPages
+export default NosotrosPages;

@@ -1,18 +1,25 @@
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
 import Main from "./components/Main";
+import HomePages from "./pages/HomePages";
+import LoginPages from "./pages/LoginPages";
+import NosotrosPages from "./pages/NosotrosPages";
+import ViewPages from "./pages/ViewPages";
+import RegisterPages from './pages/RegisterPages';
+
 import './styles/App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
+// Integrantes del Grupo 6:
+// Micaela Ponce - Legajo: 61046
+// Samaniego Esteban Maximiliano - Legajo: 61468
+// Gabriel Timo - Legajo: 61240
+// Franco Giacobbe - Legajo: 61167
+// Juan Daniel Morales - Legajo: 61338
+// Pablo Emanuel Ruiz - Legajo: 61324
 
-
-//Integrantes del Grupo 6:
-//Micaela Ponce - Legajo: 61046
-//Samaniego Esteban Maximiliano, Legajo: 61468
-//Gabriel Timo - Legajo: 61240
-//Franco Giacobbe - Legajo: 61167
-//Juan Daniel Morales - Legajo: 61338
-//Pablo Emanuel Ruiz - Legajo: 61324
-
-function App() {
+const App = () => {
   const integrantes = [
     {
       nombre: "Gabriel",
@@ -57,8 +64,18 @@ function App() {
       foto: "/imagenes/Mica.png",
     }
   ];
+
   return (
-    <Main integrantes = {integrantes} />
+    <Router>
+      <Routes>
+        <Route path="/" element={<Main integrantes={integrantes} />} />
+        <Route path="/login" element={<LoginPages />} />
+        <Route path="/register" element={<RegisterPages />} />
+        <Route path="/nosotros" element={<NosotrosPages />} />
+        <Route path="/view" element={<ViewPages />} />
+        <Route path="/home" element={<HomePages />} />
+      </Routes>
+    </Router>
   );
 }
 
