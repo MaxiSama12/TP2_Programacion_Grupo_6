@@ -9,6 +9,7 @@ import ViewPages from "./pages/ViewPages";
 import RegisterPages from "./pages/RegisterPages";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import NosotrosPages from "./pages/NosotrosPages";
 
 //Integrantes del Grupo 6:
 //Micaela Ponce - Legajo: 61046
@@ -70,7 +71,7 @@ function App() {
         <Route path="/" element={<Main integrantes={integrantes} />} />
         <Route path="/login" element={<LoginPages />} />
         <Route path="/register" element={<RegisterPages />} />
-        {/* <Route path="/nosotros" element={<NosotrosPages />} /> */}
+        <Route path="/nosotros" element={<NosotrosPages integrantes={integrantes} />} />
         <Route path="/view" element={<ViewPages />} />
         {/* <Route path="/home" element={<HomePages />} /> */}
       </Routes>

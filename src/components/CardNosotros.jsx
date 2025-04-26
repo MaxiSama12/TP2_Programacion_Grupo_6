@@ -3,8 +3,12 @@ import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import { FaGithub } from "react-icons/fa";
 import "../styles/cardNosotros.css";
+import View from "./View";
 
 const CardNosotros = ({ nombre, github, img, legajo }) => {
+  
+  const [modalShow, setModalShow] = React.useState(false);
+
   return (
     <>
       <Card className="card-nosotros">
@@ -25,8 +29,13 @@ const CardNosotros = ({ nombre, github, img, legajo }) => {
               Github
             </Button>
           </a>
+          <Button variant="primary" onClick={() => setModalShow(true)}>
+            Ver más
+          </Button>
         </Card.Body>
       </Card>
+
+      <View show={modalShow} nombre={nombre} github={github} legajo={legajo} onHide={() => setModalShow(false)} />
     </>
   );
 };

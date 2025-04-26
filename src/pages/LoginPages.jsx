@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import "../styles/loginPage.css"
 
 const LoginPages = () => {
   const [email, setEmail] = useState('');
@@ -36,7 +37,7 @@ const LoginPages = () => {
   };
 
   return (
-    <div className="container mt-5">
+    <div className="container mt-5 login-cont p-5">
       <h1 className="text-center mb-4">Iniciar Sesión</h1>
       <div className="row justify-content-center">
         <div className="col-12 col-md-6">
