@@ -10,12 +10,12 @@ background: linear-gradient(90deg, rgba(0, 0, 0, 1) 16%, rgba(21, 21, 117, 1) 78
 }
 
 .textNav {
-    color: white;
+    color: white !important;
     font-size: 25px;
 }
 
 .links {
-    color: white;
+    color: white !important;
     font-size: 22px;
     font-weight: 600;
     position: relative;
