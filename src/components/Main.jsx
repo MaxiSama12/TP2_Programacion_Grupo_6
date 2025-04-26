@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Nosotros from "./Nosotros";
+import View from "./View"
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../styles/main.css"
 
@@ -95,6 +96,7 @@ function Main({ integrantes }) {
           </div>
         </form>
         <Nosotros integrantes={equipo} />
+        <View />
       </div>
     </div>
   );
