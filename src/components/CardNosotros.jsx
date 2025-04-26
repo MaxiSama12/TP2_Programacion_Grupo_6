@@ -7,7 +7,7 @@ import "../styles/cardNosotros.css";
 const CardNosotros = ({ nombre, github, img, legajo }) => {
   return (
     <>
-      <Card>
+      <Card className="card-nosotros">
         <Card.Img variant="top" src={img} className="img-fluid" />
         <Card.Body className="d-grid">
           <Card.Title>{nombre}</Card.Title>
@@ -18,7 +18,7 @@ const CardNosotros = ({ nombre, github, img, legajo }) => {
             className="text-reset w-100 text-decoration-none d-flex align-items-center justify-content-center text-center"
           >
             <Button
-              variant="outline-dark"
+              variant="outline-light"
               className="w-100 mb-2 d-flex align-items-center justify-content-center text-center"
             >
               <FaGithub className="mx-2" />

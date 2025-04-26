@@ -1,4 +1,15 @@
 .img-fluid {
-    max-height: 300px;
-    object-fit: cover;
+  height: 300px;
+  object-fit: cover;
+}
+
+.card-nosotros {
+  background: rgba(22, 25, 22, 0.4); /* Blanco semitransparente */
+  backdrop-filter: blur(10px); /* Blur */
+  -webkit-backdrop-filter: blur(10px); /* Safari */
+  border: 1px solid rgba(255, 255, 255, 0.3); 
+  border-radius: 1rem; /* Bordes redondeados */
+  overflow: hidden;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37); /* Sombra sutil */
+  color: white;
 }
