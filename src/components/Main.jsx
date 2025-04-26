@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Nosotros from "./Nosotros";
 import "bootstrap/dist/css/bootstrap.min.css";
+import "../styles/main.css"
 
 function Main({ integrantes }) {
   const [equipo, setEquipo] = useState(integrantes);
@@ -26,8 +27,8 @@ function Main({ integrantes }) {
   };
 
   return (
-    <div className="container my-5">
-      <div className="card shadow-lg p-4 rounded-4">
+    <div className="container my-5 ">
+      <div className="card shadow-lg p-4 rounded-4 cont-principal">
         <h2 className="text-center mb-4">Agregar integrante</h2>
         <form onSubmit={handleSubmit}>
           <div className="row">

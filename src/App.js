@@ -1,4 +1,6 @@
 import Main from "./components/Main";
+import Header from "./components/Header"
+import Footer from "./components/Footer"
 import "./styles/App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
@@ -57,7 +59,9 @@ function App() {
   ];
   return (
     <>
+      <Header />
       <Main integrantes={integrantes} />
+      <Footer />
     </>
   );
 }
