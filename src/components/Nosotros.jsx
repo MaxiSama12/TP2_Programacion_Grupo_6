@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Nosotros = () => {
+const Nosotros = ({integrantes}) => {
   return (
     <div>Nosotros</div>
   )
