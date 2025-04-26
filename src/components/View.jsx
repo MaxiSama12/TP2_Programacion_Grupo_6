@@ -7,7 +7,11 @@ function View() {
   const location = useLocation();
   const integrante = location.state; // Contiene el objeto del integrante que fue pasado desde otra página
   
-  
+  // Si no hay integrante, muestra un mensaje
+  if (!integrante) {
+    return <p className="text-center  mt-5">No se encontro ningun integrante.</p>; 
+  }
+
   return (
     <div className="container text-center py-5">
       <h2 className="mb-4">{integrante.nombre} {integrante.apellido}</h2>
