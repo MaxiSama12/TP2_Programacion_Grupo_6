@@ -19,11 +19,17 @@ function Main({ integrantes }) {
     });
   };
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setEquipo([...equipo, nuevo]);
+    setNuevo({ nombre: '', apellido: '', legajo: '', github: '', foto: '' });
+  };
+
   return (
     <div className="container">
       <h2>Agregar integrante</h2>
 
-      <form>
+      <form onSubmit={handleSubmit}>
         <input
           type="text"
           name="nombre"
