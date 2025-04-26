@@ -62,7 +62,7 @@ const App = () => {
       legajo: "61046",
       github: "https://github.com/Mica8p",
       foto: "/imagenes/Mica.png",
-    }
+    },
   ];
 
   return (
