@@ -4,11 +4,11 @@ const Main = ({integrantes}) => {
   return (
     <div>
       <h1 className="text-center mt-4">Bienvenidos al Grupo 6</h1>
-      <div className="row">
+      {/* <div className="row">
         {integrantes.map((integrante, index) => (
           <div key={index} className="col-12 col-md-4">
             <div className="text-center">
-              {/* Aquí aplicamos las clases de Bootstrap */}
+              {/* Aquí aplicamos las clases de Bootstrap 
               <img
                 src={integrante.foto}
                 alt={`${integrante.nombre} ${integrante.apellido}`}
@@ -22,7 +22,7 @@ const Main = ({integrantes}) => {
             </div>
           </div>
         ))}
-      </div>
+      </div> */}
     </div>
   );
 };
