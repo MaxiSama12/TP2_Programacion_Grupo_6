@@ -59,7 +59,6 @@ function App() {
   return (
     <>
       <Main integrantes={integrantes} />
-      <Nosotros integrantes={integrantes} />
     </>
   );
 }
