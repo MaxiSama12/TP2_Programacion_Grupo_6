@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import Nosotros from "./Nosotros";
-import View from "./View"
+import View from "./View";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "../styles/main.css"
+import "../styles/main.css";
 
 function Main({ integrantes }) {
   const [equipo, setEquipo] = useState(integrantes);
@@ -30,7 +30,9 @@ function Main({ integrantes }) {
   return (
     <div className="container my-5 ">
       <div className="card shadow-lg p-4 rounded-4 cont-principal">
-        <h2 className="text-center mb-4">Agregar integrante</h2>
+      <Nosotros integrantes={equipo} />
+      <hr />
+        <h2 className="text-center my-4">Agregar integrante</h2>
         <form onSubmit={handleSubmit}>
           <div className="row">
             <div className="col-md-6 mb-3">
@@ -89,13 +91,12 @@ function Main({ integrantes }) {
               />
             </div>
           </div>
-          <div className="text-center mt-4">
+          <div className="text-center my-4">
             <button className="btn btn-dark px-5" type="submit">
               Agregar integrante
             </button>
           </div>
         </form>
-        <Nosotros integrantes={equipo} />
       </div>
     </div>
   );

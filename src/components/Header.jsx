@@ -2,6 +2,7 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import '../styles/Header.css'
+import { Link } from 'react-router-dom';
 
 function BasicExample() {
   return (
@@ -11,9 +12,9 @@ function BasicExample() {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav" >
           <Nav className="me-auto nav">
-            <Nav.Link href="/" className='links'>Home</Nav.Link>
-            <Nav.Link href="#nosotros" className='links'>Nosotros</Nav.Link> 
-            <Nav.Link href="/login" className='links'>Login</Nav.Link>
+            <Link to="/" className='links'>Home</Link>
+            <Link to="/nosotros" className='links'>Nosotros</Link> 
+            <Link to="/login" className='links'>Login</Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
