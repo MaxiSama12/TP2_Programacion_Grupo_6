@@ -1,5 +1,4 @@
 import Main from "./components/Main";
-import Nosotros from "./components/Nosotros";
 import "./styles/App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
@@ -59,7 +58,6 @@ function App() {
   return (
     <>
       <Main integrantes={integrantes} />
-      <Nosotros integrantes={integrantes} />
     </>
   );
 }
