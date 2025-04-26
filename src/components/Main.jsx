@@ -30,42 +30,57 @@ function Main({ integrantes }) {
       <h2>Agregar integrante</h2>
 
       <form onSubmit={handleSubmit}>
-        <input
-          type="text"
-          name="nombre"
-          placeholder="Nombre"
-          value={nuevo.nombre}
-          onChange={handleChange}
-        />
-        <input
-          type="text"
-          name="apellido"
-          placeholder="Apellido"
-          value={nuevo.apellido}
-          onChange={handleChange}
-        />
-        <input
-          type="text"
-          name="legajo"
-          placeholder="Legajo"
-          value={nuevo.legajo}
-          onChange={handleChange}
-        />
-        <input
-          type="text"
-          name="github"
-          placeholder="GitHub"
-          value={nuevo.github}
-          onChange={handleChange}
-        />
-        <input
-          type="text"
-          name="foto"
-          placeholder="URL de foto"
-          value={nuevo.foto}
-          onChange={handleChange}
-        />
-        <button type="submit">Agregar</button>
+        <div className="mb-3">
+          <input
+            className="form-control"
+            type="text"
+            name="nombre"
+            placeholder="Nombre"
+            value={nuevo.nombre}
+            onChange={handleChange}
+          />
+        </div>
+        <div className="mb-3">
+          <input
+            className="form-control"
+            type="text"
+            name="apellido"
+            placeholder="Apellido"
+            value={nuevo.apellido}
+            onChange={handleChange}
+          />
+        </div>
+        <div className="mb-3">
+          <input
+            className="form-control"
+            type="text"
+            name="legajo"
+            placeholder="Legajo"
+            value={nuevo.legajo}
+            onChange={handleChange}
+          />
+        </div>
+        <div className="mb-3">
+          <input
+            className="form-control"
+            type="text"
+            name="github"
+            placeholder="GitHub"
+            value={nuevo.github}
+            onChange={handleChange}
+          />
+        </div>
+        <div className="mb-3">
+          <input
+            className="form-control"
+            type="text"
+            name="foto"
+            placeholder="URL de foto"
+            value={nuevo.foto}
+            onChange={handleChange}
+          />
+        </div>
+        <button className="btn btn-primary" type="submit">Agregar</button>
       </form>
 
       <Nosotros integrantes={equipo} />
