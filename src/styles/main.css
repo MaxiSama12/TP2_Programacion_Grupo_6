@@ -1,0 +1,6 @@
+.cont-principal{
+    background: rgba(22, 25, 22, 0.4); 
+    backdrop-filter: blur(10px); 
+    -webkit-backdrop-filter: blur(10px); 
+    color: white;
+}
