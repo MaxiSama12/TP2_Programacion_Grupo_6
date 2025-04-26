@@ -3,7 +3,7 @@ import React from 'react'
 const Main = ({integrantes}) => {
   return (
     <div>
-      <h1>Integrantes del grupo</h1>
+      <h1 className="text-center mt-4">Integrantes del grupo</h1>
       {integrantes.map((integrante, index) => (
         <div key={index}>
           <h2>{integrante.nombre} {integrante.apellido}</h2>
