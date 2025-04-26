@@ -1,8 +1,7 @@
 import Main from "./components/Main";
-import './styles/App.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
-
-
+import Nosotros from "./components/Nosotros";
+import "./styles/App.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 //Integrantes del Grupo 6:
 //Micaela Ponce - Legajo: 61046
@@ -55,10 +54,13 @@ function App() {
       legajo: "61046",
       github: "https://github.com/Mica8p",
       foto: "/imagenes/Mica.png",
-    }
+    },
   ];
   return (
-    <Main integrantes = {integrantes} />
+    <>
+      <Main integrantes={integrantes} />
+      <Nosotros integrantes={integrantes} />
+    </>
   );
 }
 

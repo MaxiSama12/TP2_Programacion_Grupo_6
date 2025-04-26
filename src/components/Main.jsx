@@ -26,64 +26,27 @@ function Main({ integrantes }) {
   };
 
   return (
-    <div className="container">
-      <h2>Agregar integrante</h2>
-
-      <form onSubmit={handleSubmit}>
-        <div className="mb-3">
-          <input
-            className="form-control"
-            type="text"
-            name="nombre"
-            placeholder="Nombre"
-            value={nuevo.nombre}
-            onChange={handleChange}
-          />
-        </div>
-        <div className="mb-3">
-          <input
-            className="form-control"
-            type="text"
-            name="apellido"
-            placeholder="Apellido"
-            value={nuevo.apellido}
-            onChange={handleChange}
-          />
-        </div>
-        <div className="mb-3">
-          <input
-            className="form-control"
-            type="text"
-            name="legajo"
-            placeholder="Legajo"
-            value={nuevo.legajo}
-            onChange={handleChange}
-          />
-        </div>
-        <div className="mb-3">
-          <input
-            className="form-control"
-            type="text"
-            name="github"
-            placeholder="GitHub"
-            value={nuevo.github}
-            onChange={handleChange}
-          />
-        </div>
-        <div className="mb-3">
-          <input
-            className="form-control"
-            type="text"
-            name="foto"
-            placeholder="URL de foto"
-            value={nuevo.foto}
-            onChange={handleChange}
-          />
-        </div>
-        <button className="btn btn-primary" type="submit">Agregar</button>
-      </form>
-
-      <Nosotros integrantes={equipo} />
+    <div>
+      <h1 className="text-center mt-4">Bienvenidos al Grupo 6</h1>
+      {/* <div className="row">
+        {integrantes.map((integrante, index) => (
+          <div key={index} className="col-12 col-md-4">
+            <div className="text-center">
+              {/* Aquí aplicamos las clases de Bootstrap 
+              <img
+                src={integrante.foto}
+                alt={`${integrante.nombre} ${integrante.apellido}`}
+                className="img-fluid rounded"  // Clase de Bootstrap para tamaño y bordes redondeados
+              />
+              <h3>{integrante.nombre} {integrante.apellido}</h3>
+              <p>Legajo: {integrante.legajo}</p>
+              <a href={integrante.github} target="_blank" rel="noopener noreferrer">
+                Ver GitHub
+              </a>
+            </div>
+          </div>
+        ))}
+      </div> */}
     </div>
   );
 }
