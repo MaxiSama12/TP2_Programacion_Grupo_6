@@ -96,7 +96,6 @@ function Main({ integrantes }) {
           </div>
         </form>
         <Nosotros integrantes={equipo} />
-        <View />
       </div>
     </div>
   );
