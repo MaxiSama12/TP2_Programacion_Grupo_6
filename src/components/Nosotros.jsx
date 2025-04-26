@@ -1,22 +1,20 @@
 import React from "react";
 import CardNosotros from "./CardNosotros";
 
-const Nosotros = () => {
-
-  const usuarios = [{
-    nombre: "franco",
-    github: "github",
-    img: "img"
-  }];
-
+const Nosotros = ({ integrantes }) => {
   return (
     <div className="container">
       <div className="row my-5">
-        <div className="col-4 mb-5">
-          {usuarios.map(({nombre, github, img}, key) => (
-            <CardNosotros key={key} nombre={nombre} github={github} img={img} />
-          ))}
-        </div>
+        {integrantes.map(({ nombre, apellido, legajo, github, foto }, key) => (
+          <div className="col-4 mb-5" key={key}>
+            <CardNosotros
+              nombre={nombre + " " + apellido}
+              github={github}
+              img={foto}
+              legajo={legajo}
+            />
+          </div>
+        ))}
       </div>
     </div>
   );
