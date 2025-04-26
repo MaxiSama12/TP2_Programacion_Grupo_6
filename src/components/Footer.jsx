@@ -16,12 +16,12 @@ const Footer = () => {
 
             <div className="col linksFooter" id="social">
               <h3>Redes Laborales</h3>
-              <a href="#">Linkedin Pablo</a> 
-              <a href="#">Linkedin Mica</a> 
-              <a href="#">Linkedin Fran</a> 
-              <a href="#">Linkedin Timo</a> 
-              <a href="#">Linkedin Esteban</a> 
-              <a href="#">Linkedin Juan</a> 
+              <a target="_BLANK" href="https://www.linkedin.com/in/pruizpesce/">Linkedin Pablo</a> 
+              <a target="_BLANK" href="https://www.linkedin.com/in/luzmicaelaponce/">Linkedin Mica</a> 
+              <a target="_BLANK" href="https://www.linkedin.com/in/franco-dario-giacobbe/">Linkedin Fran</a> 
+              <a target="_BLANK" href="https://www.linkedin.com/in/gabriel-timo-2aa480311/">Linkedin Timo</a> 
+              <a target="_BLANK" href="https://www.linkedin.com/in/esteban-maximiliano-samaniego-33b4a3263/">Linkedin Esteban</a> 
+              <a target="_BLANK" href="https://www.linkedin.com/in/juan-pablo-morales-018/">Linkedin Juan</a> 
             </div>
 
             <div className="col linksFooter" id="useful-links">
