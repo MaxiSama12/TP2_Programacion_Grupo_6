@@ -4,9 +4,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import Main from "./components/Main";
-import HomePages from "./pages/HomePages";
 import LoginPages from "./pages/LoginPages";
-import NosotrosPages from "./pages/NosotrosPages";
 import ViewPages from "./pages/ViewPages";
 import RegisterPages from "./pages/RegisterPages";
 import Header from "./components/Header";
@@ -72,9 +70,9 @@ function App() {
         <Route path="/" element={<Main integrantes={integrantes} />} />
         <Route path="/login" element={<LoginPages />} />
         <Route path="/register" element={<RegisterPages />} />
-        <Route path="/nosotros" element={<NosotrosPages />} />
+        {/* <Route path="/nosotros" element={<NosotrosPages />} /> */}
         <Route path="/view" element={<ViewPages />} />
-        <Route path="/home" element={<HomePages />} />
+        {/* <Route path="/home" element={<HomePages />} /> */}
       </Routes>
       <Footer />
     </>

@@ -3,7 +3,7 @@ import CardNosotros from "./CardNosotros";
 
 const Nosotros = ({ integrantes }) => {
   return (
-    <div className="container mb-5">
+    <div className="container mb-5" id="nosotros">
       <div className="p-4 rounded-4">
         <hr />
         <h2 className="text-center my-4">Integrantes</h2>
