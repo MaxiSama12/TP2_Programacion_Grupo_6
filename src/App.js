@@ -5,11 +5,11 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import Main from "./components/Main";
 import LoginPages from "./pages/LoginPages";
-import ViewPages from "./pages/ViewPages";
 import RegisterPages from "./pages/RegisterPages";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import NosotrosPages from "./pages/NosotrosPages";
+import PrivateRoute from "./components/PrivateRoute";
 
 //Integrantes del Grupo 6:
 //Micaela Ponce - Legajo: 61046
@@ -66,16 +66,31 @@ function App() {
   ];
   return (
     <>
-      <Header />
-      <Routes>
-        <Route path="/" element={<Main integrantes={integrantes} />} />
-        <Route path="/login" element={<LoginPages />} />
-        <Route path="/register" element={<RegisterPages />} />
-        <Route path="/nosotros" element={<NosotrosPages integrantes={integrantes} />} />
-        <Route path="/view" element={<ViewPages />} />
-        {/* <Route path="/home" element={<HomePages />} /> */}
-      </Routes>
-      <Footer />
+      <Router>
+        <Header />
+        <Routes>
+          <Route path="/login" element={<LoginPages />} />
+          <Route path="/register" element={<RegisterPages />} />
+
+          <Route
+            path="/"
+            element={
+              <PrivateRoute>
+                <Main integrantes={integrantes} />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path="/nosotros"
+            element={
+              <PrivateRoute>
+                <NosotrosPages integrantes={integrantes} />
+              </PrivateRoute>
+            }
+          />
+        </Routes>
+        <Footer />
+      </Router>
     </>
   );
 }

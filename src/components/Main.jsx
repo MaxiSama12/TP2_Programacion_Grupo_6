@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import Nosotros from "./Nosotros";
-import View from "./View";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../styles/main.css";
 

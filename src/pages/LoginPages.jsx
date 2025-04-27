@@ -1,38 +1,37 @@
-import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import "../styles/loginPage.css"
+import React, { useState } from "react";
+import { useNavigate, useLocation } from "react-router-dom";
+import "../styles/loginPage.css";
 
 const LoginPages = () => {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [error, setError] = useState('');
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
+  const location = useLocation();
   const navigate = useNavigate();
+  const from = location.state?.from?.pathname || "/";
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if (email.trim() === '' || password.trim() === '') {
-      setError('Todos los campos son obligatorios');
+    if (email.trim() === "" || password.trim() === "") {
+      setError("Todos los campos son obligatorios");
       return;
     }
 
-    // Obtener usuarios registrados de localStorage
-    const users = JSON.parse(localStorage.getItem('users')) || [];
+    
+    const users = JSON.parse(localStorage.getItem("users")) || [];
 
-    // Verificar si existe el usuario
-    const userFound = users.find(user => user.email === email && user.password === password);
+    
+    const userFound = users.find(
+      (user) => user.email === email && user.password === password
+    );
 
     if (userFound) {
-      // Usuario válido
-      setError('');
-      
-      // Guardamos el email del usuario logueado en localStorage
-      localStorage.setItem('loggedInEmail', email);
-
-      // Redirigir a Home
-      navigate('/');
+      setError("");
+      localStorage.setItem("loggedInEmail", email);
+      navigate(from, { replace: true });
     } else {
-      setError('Email o contraseña incorrectos');
+      setError("Email o contraseña incorrectos");
     }
   };
 
@@ -49,7 +48,9 @@ const LoginPages = () => {
 
           <form onSubmit={handleSubmit}>
             <div className="mb-3">
-              <label htmlFor="email" className="form-label">Correo electrónico</label>
+              <label htmlFor="email" className="form-label">
+                Correo electrónico
+              </label>
               <input
                 type="email"
                 className="form-control"
@@ -60,7 +61,9 @@ const LoginPages = () => {
               />
             </div>
             <div className="mb-3">
-              <label htmlFor="password" className="form-label">Contraseña</label>
+              <label htmlFor="password" className="form-label">
+                Contraseña
+              </label>
               <input
                 type="password"
                 className="form-control"
@@ -71,7 +74,9 @@ const LoginPages = () => {
               />
             </div>
             <div className="d-grid mb-3">
-              <button type="submit" className="btn btn-primary">Ingresar</button>
+              <button type="submit" className="btn btn-primary">
+                Ingresar
+              </button>
             </div>
             <div className="text-center">
               <a href="/register">¿No tienes cuenta? Regístrate</a>
